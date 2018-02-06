@@ -55,6 +55,7 @@ public class GameOfWar
      */
     public void playHand(ArrayList<Card> warPile)
     {
+        System.out.println(getStatus());
         Card p1Card = p1Hand.remove(0);
         Card p2Card = p2Hand.remove(0);
         
@@ -79,6 +80,7 @@ public class GameOfWar
         //must be a tie
         else
         {
+            System.out.println("~~~~~~~~~~~WAR!!!~~~~~~~~~~~~");
             warPile.add(p1Card);
             warPile.add(p2Card);
             
@@ -115,7 +117,7 @@ public class GameOfWar
     {
         String p1Status = String.format("P1 # of cards: %2d, %15s",p1Hand.size(),
                                                         p1Hand.get(0));
-        String p2Status = String.format("P2 # of cards: %2d, %15s%n",p2Hand.size(),
+        String p2Status = String.format("P2 # of cards: %2d, %15s",p2Hand.size(),
                                                         p2Hand.get(0));
         return p1Status + "   " + p2Status;
         
