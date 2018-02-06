@@ -64,4 +64,12 @@ public class DeckOfCards {
         SecureRandom rng = new SecureRandom();
         return deck.remove(rng.nextInt(deck.size()));
     }
+    
+    /**
+     * This method returns the number of Card objects in the deck
+     */
+    public int getNumberOfCardsRemaining()
+    {
+        return deck.size();
+    }
 }
