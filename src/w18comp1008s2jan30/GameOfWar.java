@@ -107,4 +107,18 @@ public class GameOfWar
             playHand(warPile);
         }
     }
+    
+    /**
+     * This method returns the status of the game
+     */
+    public String getStatus()
+    {
+        String p1Status = String.format("P1 # of cards: %2d, %15s",p1Hand.size(),
+                                                        p1Hand.get(0));
+        String p2Status = String.format("P2 # of cards: %2d, %15s%n",p2Hand.size(),
+                                                        p2Hand.get(0));
+        return p1Status + "   " + p2Status;
+        
+        
+    }
 }
